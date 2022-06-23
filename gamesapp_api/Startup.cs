@@ -36,7 +36,7 @@ namespace gamesapp_api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "gamesapp_api", Version = "v1" });
             });
             services.AddCors(o => o.AddPolicy("Policy", builder => {
-                builder.WithOrigins("http://localhost:4200")
+                builder.WithOrigins("http://localhost:4200", "https://gamesapi-e4760.web.app")
                     .AllowAnyMethod()
                     .AllowCredentials()
                     .AllowAnyHeader();

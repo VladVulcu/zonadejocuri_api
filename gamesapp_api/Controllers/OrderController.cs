@@ -1,5 +1,6 @@
 ﻿using gamesapp_api.Data;
 using gamesapp_api.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,6 @@ namespace gamesapp_api.Controllers
         {
             return await _dbcontext.order.ToListAsync();
         }
-
         [HttpPost("CreateOrder")]
         public IActionResult Create(Order request)
         {
